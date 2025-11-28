@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <style>
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            height: 100vh;
+            background: #f4f6f9;
+        }
+
+        .sidebar {
+            background: #1f2d3d;
+            color: #fff;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .topbar {
+            background: white;
+            padding: 15px;
+            font-size: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,.1);
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,.1);
+        }
+
+        .notifications, .activities {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,.1);
+        }
+        @media(max-width:768px) {
+            
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none;
+            }
+            .cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        Student Panel
+    </aside>
+
+    <div>
+        <header class="topbar">Welcome, Student</header>
+
+        <main class="content">
+
+            <div class="cards">
+                <div class="card">Courses: 6</div>
+                <div class="card">CGPA: 8.7</div>
+                <div class="card">Attendance: 92%</div>
+            </div>
+
+            <section class="notifications">
+                <h3>Notifications</h3>
+                <p>• Assignment due tomorrow<br>
+                   • Quiz results released<br>
+                   • New announcement posted</p>
+            </section>
+
+            <section class="activities">
+                <h3>Recent Activities</h3>
+                <p>• Submitted DS assignment<br>
+                   • Viewed Web Dev notes<br>
+                   • Attended Java class</p>
+            </section>
+
+        </main>
+    </div>
+
+</div>
+
+</body>
+</html>
